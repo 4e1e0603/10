@@ -81,7 +81,7 @@ function test(N::Int64, M::Int64)
         # you like to exclude compile time from test.
 
         f(rand(Float64, N), rand(Float64, N))
-
+        # println( f([2.0, 1.0], [1.0, 2.0])) # simple test
         ts = Vector{Float64}()
 
         for n in ns
