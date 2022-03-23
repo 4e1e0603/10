@@ -1,0 +1,4 @@
+name = "Examples"
+uuid = "b6475455-34d8-49d7-b1e1-a5bcb0c36f5d"
+authors = ["David Landa <david.landa@protonmail.com>"]
+version = "0.1.0"

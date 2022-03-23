@@ -1,0 +1,4 @@
+name = "MathFunctions"
+uuid = "f19601b4-96e9-4915-b921-abe7e47eaf8e"
+authors = ["David Landa <david.landa@protonmail.com>"]
+version = "0.1.0"

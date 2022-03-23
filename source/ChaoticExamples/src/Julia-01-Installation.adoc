@@ -1,0 +1,62 @@
+=  Julia
+
+== Instalace Windows
+
+Julia se naistaluje do & `C:\Users\dlanda\AppData\Local\Programs\Julia 1.5.4`.
+Pokud ji chceme volat z příkazové řádky v PowerShell musíme zadat např.
+
+
+    & 'C:\Users\dlanda\AppData\Local\Programs\Julia 1.5.4\bin\julia.exe'
+
+
+Poté se nám zobrazí interaktivní prostředí tzv. REPL (Read-Evalueate-Print-Loop)
+
+[source,julia]
+----
+               _
+   _       _ _(_)_     |  Documentation: https://docs.julialang.org
+  (_)     | (_) (_)    |
+   _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+  | | | | | | |/ _` |  |
+  | | |_| | | | (_| |  |  Version 1.5.4 (2021-03-11)
+ _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+|__/                   |
+
+julia>
+----
+
+
+Nyní můžeme pracoat v interktivním režimu
+
+[source,julia]
+----
+julia > 1 + 1
+2
+----
+
+Pomocí `CTRL-D` ukončíme REPL
+
+
+== Práce s balíky
+
+V REPL zadáme `]` a můžeme pracovat s package managerem
+
+    (@v1.5) pkg>
+
+
+
+== Virtuální prostředí
+
+Pokud znáte pojem virtuální prostředí při práci s jazykem Python, mohlo by vás napadnout, jak s virtuálním prostředím pracovat v Julii.
+Ve výchozím stavu se nacházíme v prostředí 
+
+
+[doc: https://pkgdocs.julialang.org/v1.2/environments/]
+
+
+    (@v1.5) pkg> activate .
+    Activating new environment at `C:\Users\dlanda\Projects\Personal\hello-julia\Project.toml`
+
+    (hello-julia) pkg>
+
+
