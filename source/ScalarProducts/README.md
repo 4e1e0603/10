@@ -1,6 +1,12 @@
 # ScalarProducts
 
-The examples of various implementations of scalar product in Julia language.
+__The examples of various implementations of scalar product in Julia language.__
+
+## Tests
+
+- [ ] Define unit tests for your functions in `test` directory.
+
+## Bencharks
 
 We can measure the time in REPL with `@time` macro e.g.
 

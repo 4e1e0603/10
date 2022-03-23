@@ -10,6 +10,32 @@ The introductory course, examples, and exercises in Julia programming language. 
 - How rto use Julia interactive REPL
 - How to create a package (package structre)
   - `str`, `test`, `Project.toml`, `Manifest.toml`
-
+- Comments
+- Print the value
 - Basic types
+- Loops (iteratiog)
+  - `for`
+  - `while`
+- Conditionals (branching)
 - Basic functions
+- Basic containers
+  - Array
+  - Dictionary
+  - Set
+  - Vector
+  - Tuple
+- Convert string to number
+- Format strings
+- Concatenate strings
+- Concatenate arrays
+  - `vcat`, `hcat`,
+- Read and write files
+- Round numeric values
+  - `round`, `ceil`, `floor`
+- Generate random numbers
+  - `rand()`, `Random`
+
+## Resources
+
+- https://julialang.org/
+- https://github.com/JuliaAcademy/JuliaTutorials/
