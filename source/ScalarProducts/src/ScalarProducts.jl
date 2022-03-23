@@ -2,6 +2,7 @@ module ScalarProducts
 
 using Plots
 using LinearAlgebra
+using BenchmarkTools
 
 
 """
@@ -55,33 +56,43 @@ end
 """
     test(F, N)
 
-Generates a couple of random vector of length `N` and returns the time necessary
-for a function `F` from your new module to calculate the result.
+Generates a couple of random vectors of length `N:100:M` and plot the time necessary
+for a functions from your module to calculate the result.
 """
-function test(F::Function, N::Int64)
-
-    x::Array{Float64, 1} = rand(Float64, N)
-    y::Array{Float64, 1} = rand(Float64, N)
-
-    # The function `F` is compiled here and
-    # you like to exclude compile time from test.
-    F(x, y)
-
+function test(N::Int64, M::Int64)
     # Don't call @time not in global scope if you
     # like to get proper allocation info from time macro, see
     # https://stackoverflow.com/a/46263352 and https://stackoverflow.com/a/46660228.
 
-    return @time F(x, y)
-end
+    ns = N:100:M
 
+    fs = [
+        scalar_product_v1,
+        scalar_product_v2,
+        scalar_product_v3,
+        scalar_product_v4
+    ]
 
-function plot()
+    gr()    # Empty plot with GR backend.
+    plot()
 
-    x::Array{Float64, 1} = rand(Float64, N)
-    y::Array{Float64, 1} = rand(Float64, N)
+    for f in fs
+        # The function `f` is compiled here because
+        # you like to exclude compile time from test.
 
-    plot(x, y,  fmt = :png)
+        f(rand(Float64, N), rand(Float64, N))
 
+        ts = Vector{Float64}()
+
+        for n in ns
+            x = rand(Float64, n)
+            y = rand(Float64, n)
+            append!(ts, @time f(x, y))
+        end
+        plot!(ns, ts, title = "Benchmarks")
+    end
+
+    savefig("Benchmarks.png")
 end
 
 

@@ -41,3 +41,4 @@ The introductory course, examples, and exercises in Julia programming language. 
 - https://docs.juliaplots.org/stable/
 - https://github.com/JuliaAcademy/JuliaTutorials/
 - https://www.geeksforgeeks.org/julia-language-introduction/
+- https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/precalc/ranges.html
