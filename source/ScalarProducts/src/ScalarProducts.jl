@@ -64,7 +64,7 @@ function test(N::Int64, M::Int64)
     # like to get proper allocation info from time macro, see
     # https://stackoverflow.com/a/46263352 and https://stackoverflow.com/a/46660228.
 
-    ns = N:100:M
+    ns = N:(10^4):M
 
     fs = [
         scalar_product_v1,
