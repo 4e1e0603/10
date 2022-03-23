@@ -37,6 +37,8 @@ julia> ScalarProducts.test(10^2, 10^6)
 
 ### Benchmarks
 
+![Benchmarks](Benchmarks.png)
+
 We can measure the time in REPL with `@time` macro e.g.
 
 ```julia
