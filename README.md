@@ -44,3 +44,4 @@ The introductory course, examples, and exercises in Julia programming language. 
 - https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/precalc/ranges.html
 - https://www.math.purdue.edu/~allen450/Plotting-Tutorial.html
 - https://www.juliabloggers.com/timing-in-julia/
+- https://discourse.julialang.org/t/difference-between-tic-toc-time-or-elapse-in-julia/1177

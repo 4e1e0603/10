@@ -87,7 +87,8 @@ function test(N::Int64, M::Int64)
         for n in ns
             x = rand(Float64, n)
             y = rand(Float64, n)
-            append!(ts, @time f(x, y))
+            t = @elapsed f(x, y)
+            append!(ts, t)
         end
         plot!(ns, ts, title = "Benchmarks")
     end
