@@ -42,3 +42,5 @@ The introductory course, examples, and exercises in Julia programming language. 
 - https://github.com/JuliaAcademy/JuliaTutorials/
 - https://www.geeksforgeeks.org/julia-language-introduction/
 - https://docs.juliahub.com/CalculusWithJulia/AZHbv/0.0.5/precalc/ranges.html
+- https://www.math.purdue.edu/~allen450/Plotting-Tutorial.html
+- https://www.juliabloggers.com/timing-in-julia/
