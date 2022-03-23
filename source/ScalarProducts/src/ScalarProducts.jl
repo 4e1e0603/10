@@ -1,6 +1,6 @@
 module ScalarProducts
 
-
+using Plots
 using LinearAlgebra
 
 
@@ -72,6 +72,16 @@ function test(F::Function, N::Int64)
     # https://stackoverflow.com/a/46263352 and https://stackoverflow.com/a/46660228.
 
     return @time F(x, y)
+end
+
+
+function plot()
+
+    x::Array{Float64, 1} = rand(Float64, N)
+    y::Array{Float64, 1} = rand(Float64, N)
+
+    plot(x, y,  fmt = :png)
+
 end
 
 

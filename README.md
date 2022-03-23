@@ -38,4 +38,6 @@ The introductory course, examples, and exercises in Julia programming language. 
 ## Resources
 
 - https://julialang.org/
+- https://docs.juliaplots.org/stable/
 - https://github.com/JuliaAcademy/JuliaTutorials/
+- https://www.geeksforgeeks.org/julia-language-introduction/
