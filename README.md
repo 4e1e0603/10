@@ -1,4 +1,8 @@
-# course-julia
+# 𝖈𝖔𝖚𝖗𝖘𝖊-𝖏𝖚𝖑𝖎𝖆
+
+**Programming in Julia from zero to hero.**
+
+The introductory course, examples, and exercises in Julia programming language. Originally written for personal needs but may be useful for other people.
 
 ## Overview
 
