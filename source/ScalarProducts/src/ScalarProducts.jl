@@ -53,6 +53,13 @@ function scalar_product_v4(x::Array{Float64,1}, y::Array{Float64,1})
 end
 
 
+function scalar_product_v5(x::Array{Float64,1}, y::Array{Float64,1})
+    s = 0.
+    foreach((v,w) -> s += v*w, x, y)
+    return s
+end
+
+
 """
     test(F, N)
 
@@ -66,22 +73,23 @@ function test(N::Int64, M::Int64)
 
     ns = N:(10^4):M
 
-    fs = [
-        scalar_product_v1,
-        scalar_product_v2,
-        scalar_product_v3,
-        scalar_product_v4
-    ]
+    fs = Dict(
+        "v1" => scalar_product_v1,
+        "v2" => scalar_product_v2,
+        "v3" => scalar_product_v3,
+        "v4" => scalar_product_v4,
+        # scalar_product_v5,
+    )
 
     gr()    # Empty plot with GR backend.
     plot()
 
-    for f in fs
+    for (name, f) in fs
         # The function `f` is compiled here because
         # you like to exclude compile time from test.
 
         f(rand(Float64, N), rand(Float64, N))
-        # println( f([2.0, 1.0], [1.0, 2.0])) # simple test
+        println( f([2.0, 1.0], [1.0, 2.0])) # simple test
         ts = Vector{Float64}()
 
         for n in ns
@@ -90,7 +98,8 @@ function test(N::Int64, M::Int64)
             t = @elapsed f(x, y)
             append!(ts, t)
         end
-        plot!(ns, ts, title = "Benchmarks")
+        plot!(ns, ts, title = "Benchmarks", label=name)
+
     end
 
     savefig("Benchmarks.png")
